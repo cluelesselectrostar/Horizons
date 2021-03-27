@@ -72,6 +72,7 @@ class cluelessBot(commands.Bot):
 		commands.Bot.__init__(self, command_prefix=command_prefix, self_bot=self_bot)
 		self.message1 = "[INFO]: Thyme is now online"
 		self.add_commands()
+		self.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='*start'))
 
 		# Calendar
 		event_1 = {'Time':'09:00-11:00', 'Event':'Electromagnetism, Laboratory', 'Location':'Imperial College EEE Building'}
@@ -114,7 +115,6 @@ class cluelessBot(commands.Bot):
 		if (emoticon == "⏭") and not user.bot:
 			await reaction.message.channel.send(embed = journeyEmbed)
 			await reaction.message.channel.send('These are the details for your next journey. I will send it to you once again before you depart!')
-			await reaction.message.channel.send(file=discord.File('images/journey_map.jpeg'))
 			msg = await reaction.message.channel.send(requestdetail)
 			reactions = ['📖','🏠','⏹']
 			for react in reactions:

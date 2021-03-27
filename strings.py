@@ -42,7 +42,7 @@ journeyEmbed.set_author(
 	name = "Requested by this nosy guy "
 )
 journeyEmbed.set_image(
-	url = 'https://raw.githubusercontent.com/cluelesselectrostar/Horizons/master/images/journey_map.jpeg'
+	url = 'https://raw.githubusercontent.com/cluelesselectrostar/Horizons/master/images/journey_map.png'
 )
 
 # Detailed Journey
